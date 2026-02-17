@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="home-intro">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section class="home-latest">
+  <h2>Latest Posts</h2>
+  {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts limit:5 %}
+        {% include post_card.html post=post %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endif %}
+</section>

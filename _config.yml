@@ -1,0 +1,38 @@
+title: Shenberg
+email: ""
+description: Personal blog, notes, and creative coding experiments.
+url: "https://shenberg.github.io"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /blog/:slug/
+excerpt_separator: "<!--more-->"
+
+theme: null
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - AGENTS.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - plans/
+  - planning/
+  - docs/internal/
+  - "*.plan.md"
